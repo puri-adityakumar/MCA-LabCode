@@ -1,1 +1,33 @@
+## Explanation of "prime.c" with the example.
 
+Example:
+- Minimum value (a): 10
+- Maximum value (n): 20
+
+Now, let's go through the code step by step:
+
+1. `printf("Minimum: ");` - This line displays the text "Minimum: " on the screen, prompting the user to enter the minimum value.
+
+2. `scanf("%d", &a);` - This line reads the user's input for the minimum value and stores it in the variable `a`. In our example, let's say the user enters 10 as the minimum value.
+
+3. `printf("Maximum: ");` - This line displays the text "Maximum: " on the screen, prompting the user to enter the maximum value.
+
+4. `scanf("%d", &n);` - This line reads the user's input for the maximum value and stores it in the variable `n`. In our example, let's say the user enters 20 as the maximum value.
+
+Now, we have `a` set to 10 and `n` set to 20.
+
+5. The `for` loop starts with `j` initialized to the minimum value `a`, which is 10, and it will continue as long as `j` is less than or equal to the maximum value `n`, which is 20. In each iteration of this loop, `j` represents a number within the specified range.
+
+6. Inside the loop, `count` is initialized to 0. This variable will be used to count the factors of the current number `j`.
+
+7. The inner `for` loop runs from `i` equal to 1 to `j`. This loop checks every number from 1 to the current number `j` to see if it's a factor of `j`.
+
+8. If `j % i == 0`, it means that `i` is a factor of `j`. In our example, if `j` is 10 and `i` is 2, then `j % i == 0` is true because 10 is divisible by 2.
+
+9. When a factor is found, the `count` variable is incremented by 1.
+
+10. After the inner loop completes, it checks if `count` is equal to 2. If `count` is 2, it means that the current number `j` has exactly two factors (1 and itself), which is a characteristic of prime numbers.
+
+11. If `count` is equal to 2, the code prints the current number `j`, which is a prime number.
+
+In our example, within the range of 10 to 20, the prime numbers are 11, 13, 17, and 19. So, those numbers would be printed by the code.
