@@ -1,0 +1,17 @@
+Algorithm with Comments:
+
+1. Input the number of elements in the sorted array.
+2. Input the elements of the sorted array.
+3. Input the element to search.
+4. Perform recursive binary search:
+  - Initialize low to 0 and high to n - 1.
+  - Use a while loop to repeatedly divide the search range in half.
+  - Calculate the middle index mid as (low + high) / 2.
+  - If the middle element is equal to the search element, set the found flag to 1 and store the index in index.
+  - If the search element is less than the middle element, update high to mid - 1 to search the left subarray.
+  - If the search element is greater than the middle element, update low to mid + 1 to search the right subarray.
+  - Continue the loop until low is less than or equal to high.
+5. Display the result based on the found flag:
+  - If the element is found, print its index.
+  - If the element is not found, print a message indicating it was not found.
+
