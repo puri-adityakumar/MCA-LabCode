@@ -1,3 +1,5 @@
+//Write an algorithm and program in C to search particular data from an array using a linear search approach.
+
 #include <stdio.h>
 
 int main() {
