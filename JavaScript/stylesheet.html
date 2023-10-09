@@ -1,0 +1,44 @@
+<!-- Write a style sheet code to apply styles using selectors -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lab Assignment</title>
+  <style>
+    .main {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .child {
+      height: 100px;
+      width: 200px;
+      text-align: center;
+      padding: 50px;
+      margin: 20px;
+      border: 1px solid black;
+      border-radius: 10%;
+    }
+
+    .child:nth-child(1) {
+      background-color: red;
+    }
+
+    .child:nth-child(2) {
+      background-color: green;
+    }
+
+    .child:nth-child(3) {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+  </div>
+</body>
+</html>
