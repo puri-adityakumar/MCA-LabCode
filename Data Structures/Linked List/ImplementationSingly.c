@@ -43,12 +43,15 @@ int main() {
     }
     printf("NULL\n");
 
-    // Clean up and free memory (Optional)
+    
+    /* 
+    Clean up and free memory (Optional)
     while (head != NULL) {
         struct Node* temp = head;
         head = head->next;
         free(temp);
     }
-
+    
+    */
     return 0;
 }
