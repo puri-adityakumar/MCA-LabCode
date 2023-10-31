@@ -114,3 +114,22 @@ int main() {
 
     return 0;
 }
+
+
+/* 
+
+    EXPLANATION:
+
+Pseudo-code explanation:
+
+1. We start by defining an array to implement the stack and initializing the top of the stack to -1, indicating an empty stack.
+2. The **`push`** function adds an element to the top of the stack if there's room. It increments the top index and stores the data. A message is printed indicating the operation result.
+3. The **`pop`** function removes and returns the top element if the stack is not empty. It retrieves the data, decrements the top index, and prints a message.
+4. The **`peek`** function returns the top element without removing it if the stack is not empty. It retrieves the data and prints a message.
+5. The **`isFull`** and **`isEmpty`** functions check whether the stack is full or empty and return a Boolean result.
+6. The **`printStack`** function displays the elements in the stack.
+7. In the **`main`** function, a menu is displayed to allow the user to choose from various stack operations. The user's choice is processed using a **`switch`** statement, and the selected operation is performed.
+8. The program continues to run until the user chooses to exit.
+
+
+*/
