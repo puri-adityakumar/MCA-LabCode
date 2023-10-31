@@ -3,49 +3,55 @@
 
 #define MAX_SIZE 6
 
-int stack[MAX_SIZE];
-int top = -1;
+int stack[MAX_SIZE]; // Define an array to implement the stack.
+int top = -1; // Initialize the top of the stack to -1 (empty).
 
 void push(int data) {
+    // Push operation: Add an element to the top of the stack.
     if (top < MAX_SIZE - 1) {
-        stack[++top] = data;
-        printf("%d pushed onto the stack.\n", data);
+        stack[++top] = data; // Increment top and store data in the stack.
+        printf("%d pushed onto the stack.\n", data); // Print a message.
     } else {
-        printf("Stack is full. Cannot push %d onto the stack.\n", data);
+        printf("Stack is full. Cannot push %d onto the stack.\n");
     }
 }
 
 int pop() {
+    // Pop operation: Remove and return the top element from the stack.
     if (top >= 0) {
-        int data = stack[top--];
-        printf("%d popped from the stack.\n", data);
+        int data = stack[top--]; // Retrieve data and decrement top.
+        printf("%d popped from the stack.\n", data); // Print a message.
         return data;
     } else {
         printf("Stack is empty. Cannot pop.\n");
-        return -1;
+        return -1; // Return a sentinel value indicating failure.
     }
 }
 
 int peek() {
+    // Peek operation: Return the top element without removing it.
     if (top >= 0) {
-        int data = stack[top];
-        printf("Top element of the stack: %d\n", data);
+        int data = stack[top]; // Retrieve data.
+        printf("Top element of the stack: %d\n", data); // Print a message.
         return data;
     } else {
         printf("Stack is empty. No element to peek.\n");
-        return -1;
+        return -1; // Return a sentinel value indicating failure.
     }
 }
 
 bool isFull() {
+    // Check if the stack is full (reached its maximum capacity).
     return top == MAX_SIZE - 1;
 }
 
 bool isEmpty() {
+    // Check if the stack is empty (no elements).
     return top == -1;
 }
 
 void printStack() {
+    // Display the elements in the stack.
     printf("Stack elements: ");
     for (int i = 0; i <= top; i++) {
         printf("%d ", stack[i]);
