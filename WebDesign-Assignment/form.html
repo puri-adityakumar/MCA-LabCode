@@ -1,0 +1,60 @@
+<html>
+    <head><title>HTML Form</title></head>
+    <style>
+
+        div {
+            width: 50%;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+        input[type=submit] {
+            width: 50%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            }
+        input[type=text], select{
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+        
+        
+
+    </style>
+    <body >
+        <h1 style="text-align: center;">Registration Form</h1>
+        <div>
+            <h3 style="text-align: center;">Admission Open 2023-24</h3>
+            <table>
+                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Phone number">
+                <input type="text" placeholder="E-mail">
+                <label for="X">Gender :</label>
+                <input type="Radio"> <label for="">Male</label>
+                <input type="radio"> <label for="">Female</label><br>
+                <select name="Course" >
+                    <option >Select a course</option>
+                    <option >MCA</option>
+                    <option >BCA</option>
+                    <option >Cybersecurity</option>
+                    <option >B.Tech AI/ML</option>
+                </select>
+                <input type="text" placeholder="City">
+                <input type="submit" value="Submit">
+                
+            </table>
+        </div>
+    </body>
+</html>
