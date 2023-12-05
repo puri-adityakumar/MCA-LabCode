@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>  
+  <style>
+    button {
+      border: 2px solid black;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <script>  
+    $(document).ready(function(){  
+      $("button").click(function(){  
+        var message = "This button was clicked.";
+        var newParagraph = $("<p></p>").text(message).css("font-weight", "bold");
+        $("body").append(newParagraph);
+      });  
+    });  
+  </script>  
+</head>  
+<body>  
+  <button>Click!!!!</button>  
+</body>  
+</html>
