@@ -1,3 +1,4 @@
+// Write a Java program to calculate the sum and average of n number of elements of an array.
 import java.util.*;
 
 class ArraySum {
