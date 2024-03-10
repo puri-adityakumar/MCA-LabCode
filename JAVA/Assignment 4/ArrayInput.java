@@ -1,3 +1,5 @@
+// Write a Java program to input n numbers in an array and display them.
+
 import java.util.Scanner;
 
 public class ArrayInputExample {
