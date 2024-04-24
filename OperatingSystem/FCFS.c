@@ -1,71 +1,32 @@
-//Program to implement first come first serve Process scheduling Algorithm in C
 #include<stdio.h>
 
- int main()
+  int main()
 
-{
+ {
 
-    int bt[20],p[20],wt[20],tat[20],i,j,n,total=0,pos,temp;
+    int n,bt[20],wt[20],tat[20],i,j;
 
-    float avg_wt,avg_tat;
+float avwt=0.0,avtat=0.0;
 
-    printf("Enter number of process:");
+    printf("Enter total number of processes(maximum 20):");
 
     scanf("%d",&n);
 
-    printf("nEnter Burst Time:n");
+  printf("nEnter Process Burst Time\n");
 
     for(i=0;i<n;i++)
 
     {
 
-        printf("p%d:",i+1);
+        printf("P[%d]:",i+1);
 
         scanf("%d",&bt[i]);
 
-        p[i]=i+1;        
-
     }
 
- 
+ wt[0]=0;  
 
-   //sorting of burst times
-
-    for(i=0;i<n;i++)
-
-    {
-
-        pos=i;
-
-        for(j=i+1;j<n;j++)
-
-        {
-
-            if(bt[j]<bt[pos])
-
-                pos=j;
-
-        }
-
- 
-
-        temp=bt[i];
-
-        bt[i]=bt[pos];
-
-        bt[pos]=temp;
-
-        temp=p[i];
-
-        p[i]=p[pos];
-
-        p[pos]=temp;
-
-    }
-
-    wt[0]=0;          
-
-    for(i=1;i<n;i++)
+for(i=1;i<n;i++)
 
     {
 
@@ -75,40 +36,38 @@
 
             wt[i]+=bt[j];
 
- 
-
-        total+=wt[i];
-
     }
 
- 
-
-    avg_wt=(float)total/n;     
-
-    total=0;
+printf("\nProcessttBurst \tWaitingTime \tTurnaround Time\n");
 
  
-
-    printf("nProcesst    Burst Time    tWaiting TimetTurnaround Time");
 
     for(i=0;i<n;i++)
 
     {
 
-        tat[i]=bt[i]+wt[i];  
+        tat[i]=bt[i]+wt[i];
 
-        total+=tat[i];
+        avwt+=wt[i];
 
-        printf("\n\np%d\t\t  %d\t\t    %d\t\t\t%d",p[i],bt[i],wt[i],tat[i]);
+        avtat+=tat[i];
+
+        printf("\nP[%d]\t\t%d\t\t%d\t\t%d",i+1,bt[i],wt[i],tat[i]);
 
     }
 
  
 
-    avg_tat=(float)total/n;   
+    avwt/=i;
 
-    printf("\n\nAverage Waiting Time=%f",avg_wt);
+    avtat/=i;
 
-    printf("\nAverage Turnaround Time=%f",avg_tat);
+    printf("\n\nAverage Waiting Time:%fms\n",avwt);
+
+    printf("\nAverage Turnaround Time:%fms\n",avtat);
+
+ 
+
+    return 0;
 
 }
